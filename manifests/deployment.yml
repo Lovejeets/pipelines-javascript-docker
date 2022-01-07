@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lovejeetspipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lovejeetspipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lovejeetspipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lovejeetspipelinesjavascriptdocker 
+          image: ljrepo.azurecr.io/lovejeetspipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
